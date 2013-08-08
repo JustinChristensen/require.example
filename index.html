@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>RequireJS Demonstration</title>
+    <meta name="description" content="RequireJS Demonstration">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="css/main.css">
+    <script data-main="js/main" src="js/lib/require.js"></script>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="user-entry-container">
+      <form class="user-entry">
+        <fieldset>
+          <legend>Register A User</legend>
+
+          <p>
+            <label for="entry-username">Username:</label>
+            <input type="text" id="entry-username" name="username" placeholder="Username" />
+          </p>
+          <p>
+            <label for="entry-password">Password:</label>
+            <input type="text" id="entry-password" name="password" placeholder="Password" />
+          </p>
+          <p>
+            <label for="entry-email">Email:</label>
+            <input type="text" id="entry-email" name="email" placeholder="Email" />
+          </p>
+          
+          <p>
+            <input type="submit" class="submit" value="Add User" />
+          </p>
+        </fieldset>
+      </form>
+    </div>
+
+    <script id="users-table-template" type="text/template">
+      <table class="users-table">
+        <thead>
+          <tr>
+            {{#headers}}
+              <th>{{.}}</th>
+            {{/headers}}
+          </tr>
+        </thead>
+        <tbody class="user-entries">
+        </tbody>
+      </table>
+    </script>
+
+    <script id="users-table-row-template" type="text/template">
+      <tr class="user">
+        <td>{{id}}</td>
+        <td>{{username}}</td>
+        <td>{{password}}</td>
+        <td>{{email}}</td>
+      </tr>
+    </script>
+
+  </body>
+</html>
