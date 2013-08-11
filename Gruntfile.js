@@ -7,19 +7,27 @@ module.exports = function (grunt) {
     dist: {
       production: {
         options: {
-          baseUrl: 'js',
-          name: "main",
-          paths: {
-            jquery: 'empty:'
+          requirejs: {
+            baseUrl: "js",
+            name: "main",
+            paths: {
+              jquery: "empty:"
+            },
+            out: "application.min.js",
+            include: "lib/require.js",
+            preserveLicenseComments: false
           },
-          out: "js/main.min.js"
+
+          compass: {
+          
+          }
         }
       }
     }
   });
 
   grunt.registerMultiTask('dist', 'Concatenate and minify JS and CSS.', function () {
-    r.optimize(this.options(), this.async());
+    r.optimize(this.options().requirejs, this.async());
   });
 
 };

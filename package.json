@@ -4,10 +4,11 @@
   "description": "Simple requirejs demonstration.",
   "main": "Gruntfile.js",
   "dependencies": {
+  },
+  "devDependencies": {
     "grunt": "~0.4.1",
     "requirejs": "~2.1.8"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "open index.html"
   },
